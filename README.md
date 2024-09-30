@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a web-based version of the classic 2048 game, built using HTML, CSS, and JavaScript. The game challenges players to combine numbered tiles on a grid to reach the elusive 2048 tile, providing an engaging and addictive experience.
+This project is a web-based version of the classic 2048 game, built using HTML, SCSS, and JavaScript. The game challenges players to combine numbered tiles on a grid to reach the elusive 2048 tile, providing an engaging and addictive experience.
 
 **Key features include**:
 

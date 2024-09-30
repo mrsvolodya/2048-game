@@ -1,7 +1,6 @@
 import { Game2048 } from "./Game2048.js";
 
 const game = new Game2048();
-
 const start = document.querySelector(".start");
 const fieldHtml = document.querySelectorAll(".field-row");
 const gameScore = document.querySelector(".game-score");
@@ -46,17 +45,20 @@ function addRandomNumber() {
 }
 
 function checkGameOver() {
+  let copyGameFiel = [...gameField];
   let hasMoveRL = false;
   let hasMoveUD = false;
   let comeIn = false;
 
-  const result = gameField.every((r) => gameField.every((_, i) => r[i] > 0));
+  const result = copyGameFiel.every((r) =>
+    copyGameFiel.every((_, i) => r[i] > 0),
+  );
 
   if (result) {
     comeIn = true;
 
     for (let row = 0; row < 4; row++) {
-      const eachRow = gameField[row];
+      const eachRow = copyGameFiel[row];
 
       for (let cell = 0; cell < 4; cell++) {
         if (eachRow[cell] === eachRow[cell + 1]) {
@@ -65,10 +67,10 @@ function checkGameOver() {
       }
     }
 
-    gameField = transpose(gameField);
+    copyGameFiel = transpose(copyGameFiel);
 
     for (let row = 0; row < 4; row++) {
-      const eachRow = gameField[row];
+      const eachRow = copyGameFiel[row];
 
       for (let cell = 0; cell < 4; cell++) {
         if (eachRow[cell] === eachRow[cell + 1]) {
