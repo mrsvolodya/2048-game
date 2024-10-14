@@ -14,6 +14,7 @@ This project is a web-based version of the classic 2048 game, built using HTML, 
 ## Technologies Used
 
 - **HTML**: For structuring the game interface and layout.
+- **BEM**: Used for naming conventions to ensure modular and maintainable styles.
 - **SCSS**: For styling the game elements and providing a visually appealing design.
 - **JavaScript**: For implementing game logic, tile movement, and score tracking.
 
